@@ -281,13 +281,78 @@
             alt=""
           />
         </section>
+        <section data-background="./dist/assets/bg.png" class="center">
+          <h3>Código React</h3>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers>
+			import React, { Component } from 'react';
+  
+			Class Example extends Component {
+			  this.state = {
+				message: "Damn I'm in a Class..."
+			  }
+
+			  turnMeIntoAFunction(){
+				...
+			  }
+
+			  componentDidMount(){
+				...
+			  }
+
+			  render(){
+				return (
+				  <div>
+					<p>{this.state.message}</p>
+					<button onClick={this.turnMeIntAFunction()}></button>
+				  </div>
+			  }
+			}
+			  </code></pre>
+        </section>
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3>Código React</h3>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers>
+				import React, { useState, useEffect } from 'react';
+
+				const Example = () => {
+				  const [message, setMessage] = useState("Nice, I'm a functional component!");
+
+				  useEffect(() => {
+					...
+				  }, [])
+
+				  const continuePresentation = () => {
+					...
+				  }
+
+				  return (
+					<p>{message}</p>
+				  );
+				}
+			</code></pre>
+        </section>
       </div>
     </div>
 
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
+    <link rel="stylesheet" href="lib/css/routeros.css" />
     <script src="plugin/highlight/highlight.js"></script>
-    <script src="index.js"></script>
   </body>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      controlsTutorial: true,
+      slideNumber: false,
+      showSlideNumber: "all",
+      center: false,
+      transition: "concave"
+    })
+  </script>
 </html>
