@@ -282,7 +282,7 @@
           />
         </section>
         <section data-background="./dist/assets/bg.png" class="center">
-          <h3>Código React</h3>
+          <h3>React - Classes</h3>
           <pre
             data-id="code-animation"
           ><code class="hljs" data-trim data-line-numbers>
@@ -303,37 +303,108 @@
 
 			  render(){
 				return (
-				  <div>
-					<p>{this.state.message}</p>
-					<button onClick={this.turnMeIntAFunction()}></button>
-				  </div>
+				  &lt;div&gt;
+					&lt;p&gt;{this.state.message}&lt;p&gt;
+					&lt;button&gt; onClick={this.turnMeIntAFunction()}>&lt;button&gt;
+				  &lt;div&gt;
 			  }
 			}
 			  </code></pre>
         </section>
-        <section class="center" data-background="./dist/assets/bg.png">
-          <h3>Código React</h3>
+        <section
+          class="center"
+          data-background="./dist/assets/bg.png"
+          data-auto-animate
+        >
+          <h3>React - Functions</h3>
           <pre
             data-id="code-animation"
           ><code class="hljs" data-trim data-line-numbers>
-				import React, { useState, useEffect } from 'react';
+			import React, { useState } from 'react';
 
-				const Example = () => {
-				  const [message, setMessage] = useState("Nice, I'm a functional component!");
+			const Example = () => {
+			  const [message, setMessage] = useState("Nice, I'm a functional component!");
 
-				  useEffect(() => {
-					...
-				  }, [])
+			  const continuePresentation = () => {
+			    ...
+			  }
 
-				  const continuePresentation = () => {
-					...
-				  }
-
-				  return (
-					<p>{message}</p>
-				  );
-				}
+			  return (
+				&lt;p&gt;{message}&lt;p&gt;
+			  );
+			}
 			</code></pre>
+        </section>
+
+        <section
+          class="center"
+          data-background="./dist/assets/bg.png"
+          data-auto-animate
+        >
+          <h3>React - Functions</h3>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers>
+			import React, { useState, useEffect } from 'react';
+
+			const Example = () => {
+			  const [message, setMessage] = useState("Nice, I'm a functional component!");
+
+			  useEffect(() => {
+				...
+			  }, [])
+
+			  const continuePresentation = () => {
+			    ...
+			  }
+
+			  return (
+				&lt;p&gt;{message}&lt;p&gt;
+			  );
+			}
+			  </code></pre>
+        </section>
+        <section
+          class="center"
+          data-background="./dist/assets/bg.png"
+          data-auto-animate
+        >
+          <h3>React - Functions</h3>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers="8">
+			import React, { useState, useEffect } from 'react';
+
+			const Example = () => {
+			  const [message, setMessage] = useState("Nice, I'm a functional component!");
+
+			  useEffect(() => {
+				...
+			  }, [message])
+
+			  const continuePresentation = () => {
+			    ...
+			  }
+
+			  return (
+				&lt;p&gt;{message}&lt;p&gt;
+			  );
+			}
+			  </code></pre>
+        </section>
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3 class="fragment fade-left" data-fragment-index="1">
+            Não, não é um <em>equalizer</em>...
+          </h3>
+          <img
+            src="./dist/assets/React600Linhas.PNG"
+            alt=""
+            srcset=""
+            style="height: 13rem;"
+          />
+          <p class="fragment fade-right" data-fragment-index="2">
+            ...até precisa de estar de lado!
+          </p>
         </section>
       </div>
     </div>
