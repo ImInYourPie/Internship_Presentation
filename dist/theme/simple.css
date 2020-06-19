@@ -359,9 +359,14 @@ section.has-dark-background h6 {
 }
 
 .zoom {
-  height: 0.3rem;
+  width: 16rem !important;
+  height: 10rem !important;
 }
 
 .zoom-big {
   height: 18rem;
+}
+
+.icon-blue {
+  color: #3949ab;
 }

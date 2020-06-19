@@ -53,8 +53,8 @@
         <section data-background="#3949ab" class="center">
           <h3>Enquadramento</h3>
           <p class="fragment fade-right">
-            Com o crescimento e a necessiade de resposta ao mesmo, a Hydradev,
-            empressa focada no desenvolvimento web, viu-se obrigada, e com
+            Com o crescimento e a necessidade de resposta ao mesmo, a Hydradev,
+            empresa focada no desenvolvimento web, viu-se obrigada e com
             capacidade para tal, de criar o seu próprio sistema de gestão.
           </p>
           <p class="fragment fade-left">
@@ -176,28 +176,12 @@
         </section>
 
         <section class="center" data-background="./dist/assets/bg.png">
-          <h3>4 Princípios de <em>Agile</em> Development</h3>
-          <ul>
-            <li class="fragment fade-left">
-              Individuos e interações acima de processos e ferramentas;
-            </li>
-            <li class="fragment fade-left">
-              Software funcional acima de documentação;
-            </li>
-            <li class="fragment fade-left">
-              Colaboração do cliente acima de negociação de contrato;
-            </li>
-            <li class="fragment fade-left">
-              Responder ás mudanças acima de seguir o plano.
-            </li>
-          </ul>
-        </section>
-
-        <section class="center" data-background="./dist/assets/bg.png">
           <h3><em>Agile</em> no Contexto do Projeto</h3>
           <ul>
             <li class="fragment fade-left"><em>Scrum meetings</em>;</li>
-            <li class="fragment fade-left"><em>Sprints</em> semanais;</li>
+            <li class="fragment fade-left">
+              Comunicação constante com o cliente;
+            </li>
             <li class="fragment fade-left">
               Uma tarefa/funcionalidade de cada vez;
             </li>
@@ -288,28 +272,9 @@
             src="./dist/assets/jira-3.svg"
             alt=""
           />
-        </section>
-        <section
-          data-background="./dist/assets/bg.png"
-          class="center"
-          data-auto-animate
-        >
-          <h3>Aquela ferramenta...</h3>
           <img
-            class="zoom"
-            src="./dist/assets/Zoom_Communications_Logo.svg"
-            alt=""
-          />
-        </section>
-        <section
-          data-background="./dist/assets/bg.png"
-          class="center"
-          data-auto-animate
-        >
-          <h3>Aquela ferramenta...</h3>
-          <img
-            class="zoom-big"
-            src="./dist/assets/Zoom_Communications_Logo.svg"
+            class="logos fragment fade-in"
+            src="./dist/assets/zoomus-icon.svg"
             alt=""
           />
         </section>
@@ -445,7 +410,7 @@
 
         <section class="center" data-background="./dist/assets/bg.png">
           <h3 class="fragment fade-left" data-fragment-index="1">
-            Não, não é um <em>equalizer</em>...
+            Página de perfil, cerca de 600 linhas
           </h3>
           <img
             src="./dist/assets/React600Linhas.PNG"
@@ -456,7 +421,7 @@
         </section>
 
         <section class="center" data-background="./dist/assets/bg.png">
-          <h3>Divição de lógica</h3>
+          <h3>Divisão de lógica</h3>
           <div class="r-stack">
             <img
               src="./dist/assets/profile_folder.PNG"
@@ -667,6 +632,60 @@
           </div>
         </section>
 
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3>Relatório</h3>
+          <ul>
+            <li>
+              Estrutura e estilos
+              <i
+                data-feather="check-circle"
+                class="fragment fade-left icon-blue"
+                data-fragment-index="0"
+              ></i>
+            </li>
+            <li>
+              Introdução
+              <i
+                data-feather="check-circle"
+                class="fragment fade-left icon-blue"
+                data-fragment-index="0"
+              ></i>
+            </li>
+            <li>
+              Contextualização
+              <i
+                data-feather="help-circle"
+                class="fragment fade-left icon-blue"
+                data-fragment-index="0"
+              ></i>
+            </li>
+            <li>
+              Metodologia de Trabalho
+              <i
+                data-feather="edit-3"
+                class="fragment fade-left icon-blue"
+                data-fragment-index="0"
+              ></i>
+            </li>
+            <li>
+              Projeto
+              <i
+                data-feather="edit-3"
+                class="fragment fade-left icon-blue"
+                data-fragment-index="0"
+              ></i>
+            </li>
+            <li>
+              Conclusões
+              <i
+                data-feather="x-circle"
+                class="fragment fade-left icon-blue"
+                data-fragment-index="0"
+              ></i>
+            </li>
+          </ul>
+        </section>
+
         <section class="center" data-background="#3949ab">
           <h3>Fim da apresentação</h3>
           <h4>Obrigado!</h4>
@@ -679,6 +698,7 @@
     <script src="plugin/markdown/markdown.js"></script>
     <link rel="stylesheet" href="lib/css/routeros.css" />
     <script src="plugin/highlight/highlight.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
   </body>
   <script>
     Reveal.initialize({
@@ -690,5 +710,7 @@
       center: false,
       transition: "concave"
     })
+
+    feather.replace()
   </script>
 </html>
