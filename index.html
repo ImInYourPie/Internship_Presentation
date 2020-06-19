@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>reveal.js</title>
+    <title>PFE - Miguel Melo</title>
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
@@ -174,6 +174,39 @@
             </svg>
           </p>
         </section>
+
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3>4 Princípios de <em>Agile</em> Development</h3>
+          <ul>
+            <li class="fragment fade-left">
+              Individuos e interações acima de processos e ferramentas;
+            </li>
+            <li class="fragment fade-left">
+              Software funcional acima de documentação;
+            </li>
+            <li class="fragment fade-left">
+              Colaboração do cliente acima de negociação de contrato;
+            </li>
+            <li class="fragment fade-left">
+              Responder ás mudanças acima de seguir o plano.
+            </li>
+          </ul>
+        </section>
+
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3><em>Agile</em> no Contexto do Projeto</h3>
+          <ul>
+            <li class="fragment fade-left"><em>Scrum meetings</em>;</li>
+            <li class="fragment fade-left"><em>Sprints</em> semanais;</li>
+            <li class="fragment fade-left">
+              Uma tarefa/funcionalidade de cada vez;
+            </li>
+            <li class="fragment fade-left">
+              Estimativa de tempo de cada tarefa;
+            </li>
+          </ul>
+        </section>
+
         <section class="center" data-background="./dist/assets/bg.png">
           <h3>Ferramentas de Back-End</h3>
           <img
@@ -219,7 +252,6 @@
             src="./dist/assets/material-ui-1.svg"
             alt=""
           />
-          <img class="logos fragment fade-in" src="./dist/assets/" alt="" />
         </section>
         <section data-background="./dist/assets/bg.png" class="center">
           <h3>Ferramentas de DevOps</h3>
@@ -281,6 +313,7 @@
             alt=""
           />
         </section>
+
         <section data-background="./dist/assets/bg.png" class="center">
           <h3>React - Classes</h3>
           <pre
@@ -305,7 +338,7 @@
 				return (
 				  &lt;div&gt;
 					&lt;p&gt;{this.state.message}&lt;p&gt;
-					&lt;button&gt; onClick={this.turnMeIntAFunction()}>&lt;button&gt;
+					&lt;button&gt; onClick={this.turnMeIntoAFunction()}>&lt;button&gt;
 				  &lt;div&gt;
 			  }
 			}
@@ -392,6 +425,24 @@
 			}
 			  </code></pre>
         </section>
+
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3>Porque mudar, se já funciona?</h3>
+          <ul>
+            <li class="fragment fade-left">
+              Fácil leitura comparado a Classes;
+            </li>
+            <li class="fragment fade-left">Melhor reusabilidade;</li>
+            <li class="fragment fade-left">
+              Podemos agora ter um <em>state</em> em componentes funcionais;
+            </li>
+            <li class="fragment fade-left">
+              Podemos agora ter acesso a <em>life-cycle methods</em>;
+            </li>
+            <li class="fragment fade-left">Funções tem melhor desempenho;</li>
+          </ul>
+        </section>
+
         <section class="center" data-background="./dist/assets/bg.png">
           <h3 class="fragment fade-left" data-fragment-index="1">
             Não, não é um <em>equalizer</em>...
@@ -402,9 +453,223 @@
             srcset=""
             style="height: 13rem;"
           />
-          <p class="fragment fade-right" data-fragment-index="2">
-            ...até precisa de estar de lado!
-          </p>
+        </section>
+
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3>Divição de lógica</h3>
+          <div class="r-stack">
+            <img
+              src="./dist/assets/profile_folder.PNG"
+              width="400"
+              height="300"
+              class="fragment fade-out"
+              data-fragment-index="0"
+            />
+            <img
+              src="./dist/assets/services_folder.PNG"
+              width="400"
+              height="300"
+              class="fragment current-visible"
+              data-fragment-index="0"
+            />
+          </div>
+        </section>
+
+        <section data-background="./dist/assets/bg.png" class="center">
+          <h3>Antes...</h3>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers>
+            getFields() {
+              axios
+                .get("/profile/fields")
+                .then(res => {
+                  const fields = res.data.fields
+                  this.setState({
+                    fields: fields,
+                    notesFields: res.data.notesFields,
+                    _createFields: _.filter(fields, (el, index) => {
+                      return el.showIn.indexOf(2) > -1
+                    }),
+                    _editFields: _.filter(fields, (el, index) => {
+                      return el.showIn.indexOf(3) > -1
+                    }),
+                    ready: true
+                  })
+          
+                  if (this.props.match.params.profileId) {
+                    this.openViewProfile(this.props.match.params.profileId)
+                    return true
+                  }
+          
+                  this.setState({ viewState: 1 })
+                })
+                .catch(err => {
+                  NotificationManager.error(err.message, "error")
+                })
+            }
+			  </code></pre>
+        </section>
+
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3>...Depois</h3>
+          <div class="r-hstack">
+            <pre
+              style="width: 100%; margin: 20px;"
+              data-id="code-animation"
+            ><code class="hljs"  title="hey" data-trim data-line-numbers>
+              // Profile/index.js
+              const getFields = async () => {
+                const res = await ProfileService.getFields()
+                setFields(res.fields)
+                setNotesFields(res.notesFields)
+                set_createFields(
+                  _.filter(res.fields, (el, index) => {
+                    return el.showIn.indexOf(2) > -1
+                  })
+                )
+                set_editFields(
+                  _.filter(res.fields, (el, index) => {
+                    return el.showIn.indexOf(3) > -1
+                  })
+                )
+              }
+        </code></pre>
+            <pre
+              style="width: 100%; margin: 20px;"
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+              // Services/profile.js
+              const getFields = async () => {
+
+                try {
+                  const res = await privateApi.get("/profile/fields")
+
+                  return { 
+                    fields: res.data.fields, 
+                    notesFields: res.data.notesFields, 
+                    resposta: res.data.resposta 
+                  }
+
+                } catch (err) {
+                  return NotificationManager.error(err.message, "Error")
+                }
+              }
+			        </code></pre>
+          </div>
+        </section>
+
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3>Dockerização</h3>
+          <div class="r-hstack">
+            <pre
+              style="margin: 20px;"
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+              # Dockerfile
+
+              # Use a lighter version of Node as a parent image
+              FROM node:13-alpine
+
+              # Set the working directory to /backend
+              WORKDIR /backend
+
+              # add `/backend/node_modules/.bin` to $PATH
+              ENV PATH /backend/node_modules/.bin:$PATH
+
+              # copy package.json into the container
+              COPY package*.json ./
+
+              # install dependencies
+              RUN npm install
+
+              # Copy the current directory contents into the container
+              COPY . .
+
+              # Make port 80 available to the world outside this container
+              EXPOSE 80
+
+              # Run the app when the container launches
+              CMD ["npm", "start"]
+          </code></pre>
+
+            <pre
+              style="margin: 20px;"
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+            version: '3'
+
+            services:
+                api:
+                    image: hydra-taskmanager
+                    container_name: hydrahr
+                    build: ./backend
+                    restart: always
+                    volumes:
+                        - ./backend:/backend
+                        - /backend/node_modules 
+                    expose: 
+                        - ${SERVER_PORT}
+                    env_file: "./.env"
+                    ports: 
+                        - ${SERVER_PORT}:3000
+                    depends_on:
+                        - mongo
+                mongo:
+                    image: mongo
+                    restart: always
+                    container_name: mongo
+                    ports:
+                        - 27017:27017
+          </code></pre>
+          </div>
+        </section>
+
+        <section class="center" data-background="./dist/assets/bg.png">
+          <h3>Aplicação</h3>
+          <div class="r-stack">
+            <img
+              src="./dist/assets/hydra_old2.PNG"
+              alt=""
+              class="fragment fade-out"
+              data-fragment-index="0"
+            />
+            <img
+              src="./dist/assets/hydra_new3.PNG"
+              alt=""
+              class="fragment currently-visible"
+              data-fragment-index="0"
+            />
+            <img
+              src="./dist/assets/hydra_old1.PNG"
+              alt=""
+              class="fragment currently-visible"
+              data-fragment-index="1"
+            />
+            <img
+              src="./dist/assets/hydra_new1.PNG"
+              alt=""
+              class="fragment currently-visible"
+              data-fragment-index="2"
+            />
+            <img
+              src="./dist/assets/hydra_old3.PNG"
+              alt=""
+              class="fragment currently-visible"
+              data-fragment-index="3"
+            />
+            <img
+              src="./dist/assets/hydra_new2.PNG"
+              alt=""
+              class="fragment currently-visible"
+              data-fragment-index="4"
+            />
+          </div>
+        </section>
+
+        <section class="center" data-background="#3949ab">
+          <h3>Fim da apresentação</h3>
+          <h4>Obrigado!</h4>
         </section>
       </div>
     </div>
