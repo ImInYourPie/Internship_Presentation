@@ -26,11 +26,11 @@ section.has-dark-background h6 {
   --background-color: #fff;
   --main-font: Helvetica, sans-serif;
   --main-font-size: 40px;
-  --main-color: #000;
+  --main-color: #a0a0a0;
   --block-margin: 20px;
   --heading-margin: 0 0 20px 0;
   --heading-font: Helvetica, sans-serif;
-  --heading-color: #3949ab;
+  --heading-color: #ff745d;
   --heading-line-height: 1.2;
   --heading-letter-spacing: normal;
   --heading-text-transform: none;
@@ -42,8 +42,8 @@ section.has-dark-background h6 {
   --heading3-size: 1.55em;
   --heading4-size: 1em;
   --code-font: monospace;
-  --link-color: #73777a;
-  --link-color-hover: #4385e7;
+  --link-color: #f7f7f7;
+  --link-color-hover: lightgrey;
   --selection-background-color: rgba(0, 0, 0, 0.99);
   --selection-color: #fff;
 }
@@ -57,7 +57,7 @@ section.has-dark-background h6 {
   font-family: var(--main-font);
   font-size: 30px;
   font-weight: normal;
-  color: #000;
+  color: #050505;
 }
 
 .reveal ::selection {
@@ -107,7 +107,7 @@ section.has-dark-background h6 {
 }
 
 .reveal h3 {
-  font-size: 1.55em;
+  font-size: 1.35em;
 }
 
 .reveal h4 {
@@ -291,13 +291,13 @@ section.has-dark-background h6 {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #00008b;
+  color: #ff6a00;
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 .reveal a:hover {
-  color: #0000f1;
+  color: #ff6a00;
   text-shadow: none;
   border: none;
 }
@@ -320,7 +320,7 @@ section.has-dark-background h6 {
 }
 
 .reveal a:hover .r-frame {
-  border-color: #00008b;
+  border-color: #ff6a00;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
@@ -368,5 +368,5 @@ section.has-dark-background h6 {
 }
 
 .icon-blue {
-  color: #3949ab;
+  color: #ff6a00;
 }
