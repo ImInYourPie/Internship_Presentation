@@ -24,19 +24,19 @@
     <div class="reveal">
       <div class="slides">
         <section
-          style="margin-top: 200px; margin-bottom: -50px;"
+          style="margin-top: 230px;"
           data-background="./dist/assets/bg.png"
           data-background-size="100% 100%"
         >
           <div>
             <h3>Desenvolvimento e Restruturação - Hydra Reporter</h3>
-            <span>Miguel Melo</span>
-            <p>Projeto Final/Estágio</p>
-            <p>Orientação: Prof. Rui Rodrigues</p>
+            <p>Miguel Melo</p>
+            <p class="subtitle">Projeto Final/Estágio</p>
+            <p class="subtitle">Orientação: Prof. Rui Rodrigues</p>
           </div>
           <br />
           <br />
-          <div>
+          <div style="margin-top: -50px;">
             <img
               style="height: 10%; width: 10%;"
               src="./css/assets/esmad.png"
@@ -59,21 +59,25 @@
             empresa focada no desenvolvimento web, viu-se obrigada e com
             capacidade para tal, de criar o seu próprio sistema de gestão.
           </p>
-          <p style="color: #fafafa;" class="fragment fade-left">
-            Trata-se então de uma plataforma com diversos serviços. Desde
-            receção e arquivamento de e-mails, criação de perfil automático de
-            candidatos, gestão de ralatórios diários, visualização de dados, e
-            gestão da carteira de clientes, entre outros.
-          </p>
         </section>
 
-        <section class="center">
+        <section>
           <section
             class="center"
             data-background="./dist/assets/bg.png"
             data-background-size="100% 100%"
           >
-            <h2>Video</h2>
+            <h2>Vídeo</h2>
+            <a href="#" class="navigate-down">
+              <img
+                class="r-frame"
+                style="background: rgba(255, 255, 255, 0.1);"
+                width="178"
+                height="238"
+                data-src="./dist/assets/arrow-down.svg"
+                alt="Down arrow"
+              />
+            </a>
           </section>
           <section
             data-background-video="./dist/assets/Video_Miguel_Melo.mp4"
@@ -457,7 +461,6 @@
             <li class="fragment fade-left">
               Podemos agora ter acesso a <em>life-cycle methods</em>;
             </li>
-            <li class="fragment fade-left">Funções tem melhor desempenho;</li>
           </ul>
         </section>
 
@@ -467,14 +470,40 @@
           data-background-size="100% 100%"
         >
           <h3 class="fragment fade-left" data-fragment-index="1">
-            Página de perfil, cerca de 600 linhas
+            Componente de perfil, cerca de 600 linhas
           </h3>
           <img
             src="./dist/assets/React600Linhas.PNG"
             alt=""
             srcset=""
-            style="height: 13rem;"
+            height="200px"
+            class="horizontal-img"
           />
+        </section>
+
+        <section
+          class="center"
+          data-background="./dist/assets/bg.png"
+          data-background-size="100% 100%"
+        >
+          <h3><em>Code Refactoring</em></h3>
+          <div>
+            <img
+              style="vertical-align: middle; margin-right: 100px; width: 30%;"
+              src="./dist/assets/refactoring-image.png"
+              alt=""
+              class="fragment fade"
+            />
+            <ul style="vertical-align: middle;">
+              <li class="fragment fade-left">
+                Manutenção;
+              </li>
+              <li class="fragment fade-left">Legibilidade;</li>
+              <li class="fragment fade-left">
+                Extensabilidade.
+              </li>
+            </ul>
+          </div>
         </section>
 
         <section
@@ -486,16 +515,12 @@
           <div class="r-stack">
             <img
               src="./dist/assets/profile_folder.PNG"
-              width="400"
-              height="300"
-              class="fragment fade-out"
+              class="fragment fade-out horizontal-img"
               data-fragment-index="0"
             />
             <img
               src="./dist/assets/services_folder.PNG"
-              width="400"
-              height="300"
-              class="fragment current-visible"
+              class="fragment current-visible horizontal-img"
               data-fragment-index="0"
             />
           </div>
@@ -663,50 +688,60 @@
           </div>
         </section>
 
-        <section
-          class="center"
-          data-background="./dist/assets/bg.png"
-          data-background-size="100% 100%"
-        >
-          <h3>Aplicação</h3>
-          <div class="r-stack">
-            <img
-              src="./dist/assets/hydra_old2.PNG"
-              alt=""
-              class="fragment fade-out"
-              data-fragment-index="0"
-            />
-            <img
-              src="./dist/assets/hydra_new3.PNG"
-              alt=""
-              class="fragment currently-visible"
-              data-fragment-index="0"
-            />
-            <img
-              src="./dist/assets/hydra_old1.PNG"
-              alt=""
-              class="fragment currently-visible"
-              data-fragment-index="1"
-            />
-            <img
-              src="./dist/assets/hydra_new1.PNG"
-              alt=""
-              class="fragment currently-visible"
-              data-fragment-index="2"
-            />
-            <img
-              src="./dist/assets/hydra_old3.PNG"
-              alt=""
-              class="fragment currently-visible"
-              data-fragment-index="3"
-            />
-            <img
-              src="./dist/assets/hydra_new2.PNG"
-              alt=""
-              class="fragment currently-visible"
-              data-fragment-index="4"
-            />
-          </div>
+        <section>
+          <section
+            class="center"
+            data-background="./dist/assets/bg.png"
+            data-background-size="100% 100%"
+          >
+            <h3>Aplicação</h3>
+            <a href="#" class="navigate-down">
+              <img
+                class="r-frame"
+                style="background: rgba(255, 255, 255, 0.1);"
+                width="178"
+                height="238"
+                data-src="./dist/assets/arrow-down.svg"
+                alt="Down arrow"
+              />
+            </a>
+          </section>
+
+          <section
+            class="center"
+            data-background="./dist/assets/hydra_old2.PNG"
+            data-background-size="100% 100%"
+          ></section>
+
+          <section
+            class="center"
+            data-background="./dist/assets/Dashboard.PNG"
+            data-background-size="100% 100%"
+          ></section>
+
+          <section
+            class="center"
+            data-background="./dist/assets/hydra_old1.PNG"
+            data-background-size="100% 100%"
+          ></section>
+
+          <section
+            class="center"
+            data-background="./dist/assets/TabelaPerfil.PNG"
+            data-background-size="100% 100%"
+          ></section>
+
+          <section
+            class="center"
+            data-background="./dist/assets/hydra_old3.PNG"
+            data-background-size="100% 100%"
+          ></section>
+
+          <section
+            class="center"
+            data-background="./dist/assets/NotasPerfil.PNG"
+            data-background-size="100% 100%"
+          ></section>
         </section>
 
         <!-- <section
@@ -767,13 +802,9 @@
           </ul>
         </section> -->
 
-        <section
-          class="center"
-          data-background="./dist/assets/bg.png"
-          data-background-size="100% 100%"
-        >
-          <h3>Fim da apresentação</h3>
-          <h4>Obrigado!</h4>
+        <section class="center" data-background="#ff6a00">
+          <h2>Fim da apresentação</h2>
+          <h4 style="color: white;">Obrigado!</h4>
         </section>
       </div>
     </div>
@@ -794,7 +825,10 @@
       slideNumber: false,
       showSlideNumber: "all",
       center: false,
-      transition: "slide"
+      transition: "slide",
+      autoAnimateEasing: "ease",
+      autoAnimateDuration: 1.0,
+      autoAnimateUnmatched: true
     })
 
     feather.replace()
