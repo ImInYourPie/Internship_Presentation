@@ -24,13 +24,13 @@ section.has-dark-background h6 {
  *********************************************/
 :root {
   --background-color: #fff;
-  --main-font: Helvetica, sans-serif;
+  --main-font: "Quicksand", sans-serif;
   --main-font-size: 40px;
   --main-color: #a0a0a0;
   --block-margin: 20px;
   --heading-margin: 0 0 20px 0;
-  --heading-font: Helvetica, sans-serif;
-  --heading-color: #116db6;
+  --heading-font: "Quicksand", sans-serif;
+  --heading-color: #2e2e2e;
   --heading-line-height: 1.2;
   --heading-letter-spacing: normal;
   --heading-text-transform: none;
@@ -41,7 +41,7 @@ section.has-dark-background h6 {
   --heading2-size: 2.11em;
   --heading3-size: 1.55em;
   --heading4-size: 1em;
-  --code-font: monospace;
+  --code-font: "Fira Code", monospace;
   --link-color: #f7f7f7;
   --link-color-hover: #116db6;
   --selection-background-color: rgba(0, 0, 0, 0.99);
@@ -56,7 +56,7 @@ section.has-dark-background h6 {
 .reveal {
   font-family: var(--main-font);
   font-size: 30px;
-  font-weight: normal;
+  font-weight: lighter;
   color: #050505;
 }
 
@@ -90,7 +90,7 @@ section.has-dark-background h6 {
   margin: 0 0 20px 0;
   color: var(--heading-color);
   font-family: var(--heading-font);
-  font-weight: normal;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: normal;
   text-transform: none;
@@ -107,7 +107,7 @@ section.has-dark-background h6 {
 }
 
 .reveal h3 {
-  font-size: 1.35em;
+  font-size: 1.3em;
 }
 
 .reveal h4 {
@@ -124,6 +124,8 @@ section.has-dark-background h6 {
 .reveal p {
   margin: 20px 0;
   line-height: 1.3;
+  font-weight: 400 !important;
+  color: #2e2e2e;
 }
 
 /* Ensure certain elements are never larger than the slide itself */
@@ -380,4 +382,18 @@ section.has-dark-background h6 {
 .horizontal-img {
   box-shadow: 3px 3px 6px #ccc;
   border: 1px solid whitesmoke;
+}
+
+.card {
+  background-color: #ff6a00;
+  border-radius: 25px;
+  padding: 1.2rem;
+  margin-left: -200px;
+  width: 40%;
+  position: absolute !important;
+}
+
+.card h3,
+.card p {
+  color: white;
 }
